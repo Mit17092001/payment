@@ -4,8 +4,9 @@ session_start();
 
 require 'stripe/Stripe.php';
 
-$publishable_key 	= "pk_live_51Mq8OZSIiEFKEPzTqiHCsVnUxHoAMk9fcsM0Y23Nlx0a0hnCWavQRbzsRCZKMrsDYTQO8cYmymgJGb3aN7rAWngq002H4whgLS";
-$secret_key			= "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";
+$publishable_key="pk_test_51MvJKdGPCeuyqQw4coIdaFPWONZKXGR1TVkDQd4URJso0c8IUXjYrXK4nZrVud6vyK23cm4jCG1E2fAMNHCd13nh00PkvIvdgG";
+// $secret_key			= "YiBjc4LAYSjuabkrrB5SSH2i";
+$secret_key="sk_test_51MvJKdGPCeuyqQw46vqz8R2Nddp9xuV18vtq89POqogkXinnJAytyCN3a46XH3UI8U9Ot5PiDdWx7H9Ox2CBn2sZ00I88YhxCH";
 
 if(isset($_POST['stripeToken'])){
 	Stripe::setApiKey($secret_key);
@@ -45,7 +46,7 @@ if(isset($_POST['stripeToken'])){
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Stripe Payment Gateway</title>
+<title>Payment Gateway</title>
 <meta name="title" content="Registration Form with PHP Captcha Demo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -64,13 +65,13 @@ if(isset($_POST['stripeToken'])){
 </head>
 <body>
 <section class="pading-bottom-30">
- 		<div class="bg_area_1">
- 		    <div class="container">  
+ 		<!-- <div class="bg_area_1"> -->
+		 <div class="container" style="margin-top:25px">  
                 <div class="row">
                     <div class="form-box-size login-form-3 box-shadow"> 
                        
                         <div class="login-form-title-3">
-                            <h3>Stripe Payment Form</h3>
+                            <h3>Payment Form</h3>
                         </div>  
                         <div class="login-form-box-3">
                             <div class="form-wrapper"> 
@@ -120,10 +121,7 @@ if(isset($_POST['stripeToken'])){
 								</select>
 								
 								<select name="year" id="year" class="form-input2" data-stripe="exp_year">
-									<option value="19">2019</option>
-									<option value="20">2020</option>
-									<option value="21">2021</option>
-									<option value="22">2022</option>
+									
 									<option value="23">2023</option>
 									<option value="24">2024</option>
 									<option value="25">2025</option>
@@ -156,7 +154,7 @@ if(isset($_POST['stripeToken'])){
                     </div>
                 </div> 
             </div> 
- 		</div> 
+ 		<!-- </div>  -->
  	</section>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
