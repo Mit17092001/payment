@@ -33,7 +33,7 @@ if(isset($_POST['stripeToken'])){
 		$result = "succeeded";
 		
 		/* You can save the above response in DB */
-		header("location:index.php?id=".$id);
+		header("location:http://localhost/php/myportfolio/suback.php?id=".$id);
 		exit;
 
 		}catch(Stripe_CardError $e) {			
@@ -90,12 +90,7 @@ if(isset($_POST['stripeToken'])){
                                   <i class="fa fa-user" aria-hidden="true"></i>
                                 </div>
                                 
-                                <div class="form-group">
-                                  <label class="form-label" for="email">Email</label>
-                                  <input name="email" id="email" class="form-input" type="email" required />
-                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </div>
-								
+                              								
 								<div class="form-group">
                                   <label class="form-label" for="card">Card Number</label>
                                   <input name="cardnumber" id="card" class="form-input" type="text" maxlength="16" data-stripe="number" required />
